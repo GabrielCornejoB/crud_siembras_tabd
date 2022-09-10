@@ -3,7 +3,15 @@
 :root {
     --principal: #dc143c;
     --background: #2b2b35;
-    --header: #222229;
+    --light: #e1ebea;
+    --header: #222229;      
+    --green: #008000;
+    --green-hover: #04af04;
+
+    /*
+    LightSeaGreen       #20B2AA
+    OrangeRed           #FF4500
+    */
 }
 * {
     box-sizing: border-box;
@@ -13,17 +21,58 @@
 body {
     background-color: var(--background);
 }
-p {
+p, a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    color: white;
 }
+span {
+    transition: 0.4s;
+}
+span:hover {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+header {
+    display: flex;
+    padding: 10px 3% 10px 1%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header);
+    height: 80px;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 5% 10%;
+    align-items: center;
+    margin: 80px 10% 5% 10%;
 }
 .title {
-    color: white;
     font-size: 50px;
+}
+.btn_index {
+    background: var(--green);
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 2px 15px;
+    font-size: 25px;
+}
+.btn_index:hover {
+    cursor: pointer;
+    background: var(--green-hover);
+}
+.header_title{
+    font-size: 40px;
+}
+
+.material-symbols-outlined {
+    color: white;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }

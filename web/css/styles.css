@@ -4,6 +4,7 @@
     --header: /*#2E3545*/ #1B1A26; 
     --left: /*#404A5F*/ #232136;
     --right: /*#48536B*/ #2B2A40;
+    --menu: #14131e;
 
     --green: #008000;
     --green-hover: #04af04;
@@ -30,7 +31,7 @@ span {
     transition: 0.4s;
 }
 span:hover {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.15);
     cursor: pointer;
 }
 header {
@@ -68,6 +69,25 @@ header {
 .header_title{
     font-size: 40px;
 }
+
+.menu_btn {
+    font-size: 45px;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: -50%;
+    width: 40%;
+    height: 100%;
+    z-index: 100;
+    background: var(--menu);
+    padding: 15px;
+    transition: 0.5s;
+}
+.menu.is-active {
+    left: 0;
+}
+
 
 .left {  
     display: flex;
@@ -133,8 +153,6 @@ header {
     width: 60%;
     background: var(--right);
 }
-
-
 
 .material-symbols-outlined {
     color: white;

@@ -22,7 +22,7 @@ html {
 body {
     height: 100%;
 }
-p, a, button {
+p, a, button, td, th {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: white;
@@ -42,6 +42,33 @@ header {
     background-color: var(--header);
     height: 12%;
     width: 100%;
+}
+table {
+    background-color: white;
+    align-self: center;
+    margin: 15px auto;
+    
+    text-align: center;
+    justify-content: center;
+    border-spacing: 0;
+    border-radius: 10px;
+    width: 80%;
+}
+td {
+    color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 0;
+    padding: 0;
+}
+th {
+    background: var(--left);
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 0;
+    padding: 0;
 }
 
 .content {
@@ -170,6 +197,10 @@ header {
     height: 100%;
     width: 60%;
     background: var(--right);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
 }
 
 .material-symbols-outlined {
@@ -179,4 +210,20 @@ header {
     'wght' 400,
     'GRAD' 0,
     'opsz' 48
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--menu);
+    border-radius: 15px;
+}
+::-webkit-scrollbar-track {
+    background:var(--left);
+    width: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--header);
 }

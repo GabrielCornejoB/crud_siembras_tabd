@@ -9,9 +9,7 @@ document.getElementById("menu").innerHTML = `
 </div>
 `
 
-
 // Toggle CRUD
-
 let div_create = document.getElementById("div_create");
 let div_update = document.getElementById("div_update");
 let div_delete = document.getElementById("div_delete");
@@ -45,7 +43,6 @@ callToActionBtns.forEach((btn) => {
 let open_btn = document.querySelector(".open_btn");
 let close_btn = document.querySelector(".close_btn");
 let menu = document.querySelector(".menu");
-// let close_btn = document.querySelector(".close_btn");
 
 open_btn.addEventListener("click", function () {
     menu.classList.toggle("is-active");

@@ -105,7 +105,6 @@ header {
     background: var(--red);
     cursor: pointer;
 }
-
 .create.active {
     background: var(--green);
 }
@@ -121,7 +120,14 @@ header {
     flex-direction: column;
     height: 90%;
     width: 100%;
+    padding: 15px 5%;
 }
+
+.crud_title {
+    font-size: 25px;
+}
+
+
 .right {
     height: 100%;
     width: 60%;

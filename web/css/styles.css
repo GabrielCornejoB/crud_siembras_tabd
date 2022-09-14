@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300&display=swap');
 
 :root {
-    --header: #2E3545;
-    --left: #404A5F;
-    --right: #48536B;
+    --header: /*#2E3545*/ #1B1A26; 
+    --left: /*#404A5F*/ #232136;
+    --right: /*#48536B*/ #2B2A40;
 
     --green: #008000;
     --green-hover: #04af04;
@@ -76,6 +76,8 @@ header {
     width: 40%;
     background: var(--left);
 }
+
+/* Menu crud parte inferior izq */
 .left_menu {
     display: grid;
     grid-template-columns: 33% 34% 33%;
@@ -83,12 +85,14 @@ header {
     width: 100%;
     height: 10%;
 }
+
 .btn_crud_menu{
     height: 100%;  
     background: var(--header);
     border: 0;
     transition: 0.75s;
     font-size: 20px;
+    box-shadow: 0;
 }
 .create:hover {
     background: var(--green);
@@ -103,7 +107,24 @@ header {
     cursor: pointer;
 }
 
+.active {
+    background: white;
+    color: red;
+}
+
+.selected-1 {
+    background: var(--green);
+}
+.selected-2 {
+    background: var(--yellow);
+}
+.selected-3 {
+    background: var(--red);
+}
+
 .left_crud {
+    display: flex;
+    flex-direction: column;
     height: 90%;
     width: 100%;
 }

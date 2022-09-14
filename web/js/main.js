@@ -11,3 +11,16 @@
 // function call_Back(output){  
 //     document.getElementById("").value = output  
 // }  
+
+// document.querySelector("button").onclick = function toggle(){
+//     document.getElementById("btn_create").classList.toggle("selected-1");
+// }
+
+const callToActionBtns = document.querySelectorAll(".btn_crud_menu");
+
+callToActionBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    callToActionBtns.forEach(f => f.classList.remove('active'));
+    e.target.classList.toggle("active");
+  });
+});

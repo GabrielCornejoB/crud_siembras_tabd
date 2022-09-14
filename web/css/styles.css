@@ -88,6 +88,24 @@ header {
     left: 0;
 }
 
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 10% 0 30%;
+}
+.nav_links a {
+    margin: 15px 0;
+    padding: 7px 0;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.75s;
+}
+.nav_links a:hover {
+    background: var(--right);
+}
 
 .left {  
     display: flex;

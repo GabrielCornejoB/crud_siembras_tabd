@@ -1,3 +1,15 @@
+document.getElementById("menu").innerHTML = `
+<span class='material-symbols-outlined close_btn' style='font-size:45px'>close</span>
+<div class='nav_links'>
+    <a href='../index.html'>Inicio</a>
+    <a href='#'>Siembras</a>
+    <a href='../tables/veredas.html'>Veredas</a>
+    <a href='../tables/variedades_arbol.html'>Variedades arbol</a>
+    <a href='../tables/municipios.html'>Municipios</a>
+</div>
+`
+
+
 // Toggle CRUD
 
 let div_create = document.getElementById("div_create");

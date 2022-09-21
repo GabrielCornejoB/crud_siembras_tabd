@@ -8,7 +8,7 @@ eel.init(path_web)
 
 @eel.expose       # en cada def
 def select():
-    conn = sql.connect("siembras_db.db")
+    conn = sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
     l_ans = []
     for row in cursor.execute("SELECT * FROM municipios;"):

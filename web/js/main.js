@@ -4,7 +4,7 @@ document.getElementById("menu").innerHTML = `
     <a href='../index.html'>Inicio</a>
     <a href='#'>Siembras</a>
     <a href='../tables/veredas.html'>Veredas</a>
-    <a href='../tables/variedades_arbol.html'>Variedades arbol</a>
+    <a href='../tables/arboles.html'>Arboles</a>
     <a href='../tables/municipios.html'>Municipios</a>
 </div>
 `

@@ -10,6 +10,7 @@ function fill_table(output) {
     json_list.forEach(row => string = string.concat("<tr><td>", row[0], "</td><td>", row[1], "</td><td>", row[2],"</td></tr>"));
     document.getElementById("data").innerHTML = string;
 }
+
 // UPDATE
 
 // DELETE

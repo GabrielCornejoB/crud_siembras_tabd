@@ -54,6 +54,10 @@ table {
     border-radius: 10px;
     width: 80%;
 }
+.siembras_table {
+    width: 900px;
+    margin: 15px 15px;
+}
 td {
     color: black;
     border-width: 1px;
@@ -69,6 +73,7 @@ th {
     border-color: black;
     margin: 0;
     padding: 0;
+    /* margin: 10px 10px; */
 }
 
 .content {
@@ -201,6 +206,8 @@ th {
     align-items: center;
     justify-content: center;
     overflow-y: scroll;
+    /* overflow-x: scroll; */
+    /* width: */
 }
 
 .material-symbols-outlined {
@@ -215,6 +222,7 @@ th {
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--menu);
@@ -223,6 +231,7 @@ th {
 ::-webkit-scrollbar-track {
     background:var(--left);
     width: 1px;
+    height: 1px;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--header);

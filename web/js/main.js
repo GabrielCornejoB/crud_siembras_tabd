@@ -2,8 +2,9 @@ document.getElementById("menu").innerHTML = `
 <span class='material-symbols-outlined close_btn' style='font-size:45px'>close</span>
 <div class='nav_links'>
     <a href='../index.html'>Inicio</a>
-    <a href='#'>Siembras</a>
+    <a href='../tables/siembras.html'>Siembras</a>
     <a href='../tables/veredas.html'>Veredas</a>
+    <a href='../tables/contratistas.html'>Contratistas</a>
     <a href='../tables/arboles.html'>Arboles</a>
     <a href='../tables/municipios.html'>Municipios</a>
 </div>

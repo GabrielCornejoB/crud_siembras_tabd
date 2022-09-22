@@ -6,7 +6,7 @@ import sqlite3 as sql
 path_web = os.path.dirname(os.path.realpath(__file__)) + "\\web"
 eel.init(path_web)
 
-@eel.expose       # en cada def
+@eel.expose       
 def select(table_name):
     conn = sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
@@ -17,5 +17,16 @@ def select(table_name):
     encoded = json.dumps(l_ans, ensure_ascii=False).encode('utf8')
     decoded = encoded.decode()
     return decoded
+
+
+@eel.expose
+def create(table_name, args):
+    conn = sql.connect("siembrasDB.sqlite")
+    cursor = conn.cursor()
+    if table_name == "municipios":
+        query = "INSERT INTO municipios (nombre) VALUES ('{}')".format(args)
+        cursor.execute(query)
+        conn.commit()
+    conn.close()
 
 eel.start("index.html")

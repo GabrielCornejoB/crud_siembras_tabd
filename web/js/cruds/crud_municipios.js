@@ -1,17 +1,20 @@
 // CREATE
-// document.querySelector(".crud_create").onclick = function (){ 
-//     console.log('create');
-// }  
+document.querySelector(".crud_create").onclick = function (){ 
+    console.log('create');
+    mun_name = document.getElementById("create_mun_name");
+    eel.create("municipios",mun_name.value);
+    location.reload();
+}  
 
 // READ
 window.onload = function () {
     eel.select("municipios")(fill_table);
 }
 function fill_table(output){
+    console.log("read");
     json_list = JSON.parse(output);
     string = "<tr><th>Id municipio</th><th>Nombre del municipio</th></tr>"
     json_list.forEach(row => string = string.concat("<tr><td>", row[0], "</td>", "<td>", row[1] ,"</td></tr>"));
-    console.log(string);
     document.getElementById("data").innerHTML = string;
 }
 

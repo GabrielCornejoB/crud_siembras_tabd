@@ -10,6 +10,7 @@
     --green-hover: #04af04;
     --yellow: #ffa500;
     --red: #dc143c;
+    --secondary: #5500ff;
 }
 * {
     box-sizing: border-box;
@@ -22,7 +23,7 @@ html {
 body {
     height: 100%;
 }
-p, a, button, td, th {
+p, a, button, td, th, input {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: white;
@@ -56,7 +57,7 @@ table {
 }
 .siembras_table {
     width: 900px;
-    margin: 15px 15px;
+    margin: 15px auto;
 }
 td {
     color: black;
@@ -73,7 +74,12 @@ th {
     border-color: black;
     margin: 0;
     padding: 0;
-    /* margin: 10px 10px; */
+}
+hr {
+    margin: 15px 0 10px 0;
+    border: none;
+    height: 2px;
+    background-color: var(--right);
 }
 
 .content {
@@ -202,6 +208,33 @@ th {
 .crud_title {
     font-size: 25px;
 }
+.crud_input {
+    color: white;
+    font-size: 15px;
+    padding: 7px 15px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #2B2A40;
+    border-radius: 10px;
+    margin: 10px;
+}
+.crud_input:focus {
+    border: 2px solid var(--secondary);
+}
+.crud_btn {
+    width: 80%;
+    padding: 7px 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: var(--secondary);
+    margin: 10px;
+    cursor: pointer;
+}
 
 
 .right {
@@ -241,4 +274,7 @@ th {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--header);
+}
+::-webkit-scrollbar-corner {
+    background: var(--left);
 }

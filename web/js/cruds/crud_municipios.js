@@ -5,7 +5,7 @@
 
 // READ
 window.onload = function () {
-    eel.select()(fill_table);
+    eel.select("municipios")(fill_table);
 }
 function fill_table(output){
     json_list = JSON.parse(output);

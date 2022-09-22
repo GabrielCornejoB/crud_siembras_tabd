@@ -138,6 +138,12 @@ th {
 .nav_links a:hover {
     background: var(--right);
 }
+.nav_icons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
 
 .left {  
     display: flex;

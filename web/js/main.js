@@ -1,7 +1,10 @@
 document.getElementById("menu").innerHTML = `
-<span class='material-symbols-outlined close_btn' style='font-size:45px'>close</span>
+<div class='nav_icons'>
+    <span class='material-symbols-outlined close_btn' style='font-size:45px'>close</span>
+    <a href='../index.html'><span class='material-symbols-outlined home_btn' style='font-size:45px'>home</span></a>
+</div>
 <div class='nav_links'>
-    <a href='../index.html'>Inicio</a>
+    <a href='#'>Vistas</a>
     <a href='../tables/siembras.html'>Siembras</a>
     <a href='../tables/veredas.html'>Veredas</a>
     <a href='../tables/contratistas.html'>Contratistas</a>

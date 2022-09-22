@@ -5,12 +5,14 @@
     --left: /*#404A5F*/ #232136;
     --right: /*#48536B*/ #2B2A40;
     --menu: #14131e;
+    --gray: #a5a5a5;
 
     --green: #008000;
     --green-hover: #04af04;
     --yellow: #ffa500;
     --red: #dc143c;
     --secondary: #5500ff;
+    --secondary_lighter: #4c00ffa3;
 }
 * {
     box-sizing: border-box;
@@ -56,14 +58,14 @@ table {
     width: 80%;
 }
 .siembras_table {
-    width: 900px;
+    width: 95%;
     margin: 15px auto;
 }
 td {
     color: black;
     border-width: 1px;
     border-style: solid;
-    border-color: black;
+    border-color: var(--gray);
     margin: 0;
     padding: 0;
 }
@@ -219,8 +221,9 @@ hr {
     background-color: #2B2A40;
     border-radius: 10px;
     margin: 10px;
+    transition: 0.5s;
 }
-.crud_input:focus {
+.crud_input:focus, .crud_input:hover {
     border: 2px solid var(--secondary);
 }
 .crud_btn {
@@ -233,7 +236,11 @@ hr {
     border-radius: 10px;
     background: var(--secondary);
     margin: 10px;
+    transition: 0.4s;
+}
+.crud_btn:hover {
     cursor: pointer;
+    background: var(--secondary_lighter);
 }
 
 

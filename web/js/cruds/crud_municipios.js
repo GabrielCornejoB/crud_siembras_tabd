@@ -1,23 +1,3 @@
-function empty_inputs() {
-    // En vez de hacer un reload, se podría simplemente reestablecer los inputs (de todas las pestañas)
-    console.log("start empty_inputs()");
-    inputs = document.getElementsByClassName("crud_input");
-    selects = document.getElementsByClassName("crud_select");
-    for (let inp of inputs) {
-        inp.value = "";
-    }
-    for (let sel of selects) {
-        sel.value = "";
-    }
-
-    console.log('end empty_inputs()');
-}
-function print_table() {
-    // Para no hacer reload tambien se puede hacer esto para que solo se actualice la tabla y yap
-    // Tocaría separar el metodo get_data
-    console.log('a')
-}
-
 // CREATE
 document.querySelector(".crud_create").onclick = function (){ 
     console.log('create');

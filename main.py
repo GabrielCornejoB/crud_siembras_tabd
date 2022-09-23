@@ -29,4 +29,16 @@ def create(table_name, args):
         conn.commit()
     conn.close()
 
+
+@eel.expose
+def update(table_name, args):
+    conn =  sql.connect("siembrasDB.sqlite")
+    cursor = conn.cursor()
+    if table_name == "municipios":
+        query = "UPDATE municipios SET nombre='{}' WHERE codigo={}".format(args[1], args[0])
+        cursor.execute(query)
+        conn.commit()
+    conn.close()
+
+
 eel.start("index.html")

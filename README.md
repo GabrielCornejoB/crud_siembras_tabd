@@ -2,7 +2,7 @@
 
 Aplicación Web de escritorio para aprender a usar SQLite, realizada para el curso Tópicos Avanzados en Bases de Datos 2022-2.
 
-El dominio del problema fue tomado de: [Datos Abiertos Colombia](https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Siembras/4wun-xk5g). Contiene el reporte de siembras reportadas en el aplicativo Sembraton sobre la juridicción de Corantioquia. Además de las tablas obtenidas en el Dataset, se crearon tablas adicionales.
+El dominio del problema fue tomado de: [Datos Abiertos Colombia](https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Siembras/4wun-xk5g). Contiene el reporte de siembras reportadas en el aplicativo Sembraton sobre la jurisdicción de Corantioquia. Además de las tablas obtenidas en el Dataset, se crearon tablas adicionales.
 
 A continuación se encuentran vinculos que te desplazarán a las diferentes secciones de este README:
 

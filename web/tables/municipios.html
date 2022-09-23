@@ -15,7 +15,6 @@
         <p class="header_title">Tabla Municipios</p>
     </header>
     <div class="content">
-        
         <div class="left">
             <div class="left_crud">
                 <div class="crud_content" id="div_create">
@@ -24,17 +23,16 @@
                     <div class="box">
                         <p>Nombre del municipio</p>
                         <input type="text" class="crud_input" id="create_mun_name">
-                    </div>
-                    
+                    </div>               
                     <button class="crud_btn crud_create">Agregar</button>
-                    <!-- <p id="p_create" class="p_msg"></p> -->
+                    <p id="p_create" class="p_msg"></p>
                 </div>
                 <div class="crud_content" id="div_update">
                     <p class="crud_title">ACTUALIZAR</p>
                     <hr>
                     <div class="box">
                         <p>Id del municipio a actualizar</p>
-                        <select id="update_mun_id"></select>
+                        <select id="update_mun_id" class="crud_select"></select>
                     </div>
                     <div class="box">
                         <p>Nuevo nombre del municipio</p>
@@ -47,7 +45,7 @@
                     <hr>
                     <div class="box">
                         <p>Id del municipio a eliminar</p>
-                        <select id="delete_mun_id"></select>
+                        <select id="delete_mun_id" class="crud_select"></select>
                     </div>
                     <button class="crud_btn crud_delete">Eliminar</button>
                 </div>

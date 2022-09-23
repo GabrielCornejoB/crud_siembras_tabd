@@ -287,7 +287,10 @@ option {
     background: var(--secondary_lighter);
 }
 .p_msg {
-    color: var(--secondary);
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--red);
+    margin-top: 15px;
 }
 
 .right {

@@ -1,10 +1,39 @@
+function empty_inputs() {
+    // En vez de hacer un reload, se podría simplemente reestablecer los inputs (de todas las pestañas)
+    console.log("start empty_inputs()");
+    inputs = document.getElementsByClassName("crud_input");
+    selects = document.getElementsByClassName("crud_select");
+    for (let inp of inputs) {
+        inp.value = "";
+    }
+    for (let sel of selects) {
+        sel.value = "";
+    }
+
+    console.log('end empty_inputs()');
+}
+function print_table() {
+    // Para no hacer reload tambien se puede hacer esto para que solo se actualice la tabla y yap
+    // Tocaría separar el metodo get_data
+    console.log('a')
+}
+
 // CREATE
 document.querySelector(".crud_create").onclick = function (){ 
     console.log('create');
     crete_mun_name = document.getElementById("create_mun_name");
-    eel.create("municipios",create_mun_name.value);
-    location.reload();
-    // document.getElementById("p_create").innerHTML = "Agregado exitosamente";
+    if(!create_mun_name.value) {                    // null, empty, undefined...
+        document.getElementById("p_create").innerHTML = "¡La entrada no puede estar vacía!".toUpperCase();
+        document.getElementById("create_mun_name").innerHTML = "";
+    }
+    else if(create_mun_name.value.length < 3) {     // string too short
+        document.getElementById("p_create").innerHTML = "¡La entrada debe tener al menos 3 cáracteres!".toUpperCase();
+        document.getElementById("create_mun_name").innerHTML = "";
+    }
+    else {
+        eel.create("municipios",create_mun_name.value);
+        location.reload();
+    }
 }  
 
 // READ
@@ -22,9 +51,6 @@ function get_data(output){
     document.getElementById("update_mun_id").innerHTML = string_select;
     document.getElementById("delete_mun_id").innerHTML = string_select;
 }
-// function print_table() {
-
-// }
 
 //UPDATE
 document.querySelector(".crud_update").onclick = function (){ 

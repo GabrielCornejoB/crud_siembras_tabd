@@ -1,8 +1,8 @@
 // CREATE
 document.querySelector(".crud_create").onclick = function (){ 
     console.log('create');
-    mun_name = document.getElementById("create_mun_name");
-    eel.create("municipios",mun_name.value);
+    crete_mun_name = document.getElementById("create_mun_name");
+    eel.create("municipios",create_mun_name.value);
     location.reload();
     // document.getElementById("p_create").innerHTML = "Agregado exitosamente";
 }  
@@ -20,6 +20,7 @@ function get_data(output){
     json_list.forEach(row => string_select = string_select.concat("<option value='", row[0], "'>", row[0], " - ", row[1], "</option>"));
     document.getElementById("data").innerHTML = string_table;
     document.getElementById("update_mun_id").innerHTML = string_select;
+    document.getElementById("delete_mun_id").innerHTML = string_select;
 }
 // function print_table() {
 
@@ -28,17 +29,20 @@ function get_data(output){
 //UPDATE
 document.querySelector(".crud_update").onclick = function (){ 
     console.log('update');
-    id_mun = document.getElementById("update_mun_id");
-    new_name = document.getElementById("update_mun_name");
-    args = [id_mun.value, new_name.value];
-    eel.update("municipios", args);
+    update_id_mun = document.getElementById("update_mun_id");
+    update_new_name = document.getElementById("update_mun_name");
+    update_args = [update_id_mun.value, update_new_name.value];
+    eel.update("municipios", update_args);
     location.reload();
 } 
 
 //DELETE
-// document.querySelector(".crud_delete").onclick = function (){ 
-//     console.log('delete');
-// }  
+document.querySelector(".crud_delete").onclick = function (){ 
+    console.log('delete');
+    delete_id_mun = document.getElementById("delete_mun_id");
+    eel.delete("municipios", delete_id_mun.value);
+    location.reload();
+}  
 
 
 

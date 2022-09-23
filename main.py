@@ -11,7 +11,7 @@ def select(table_name):
     conn = sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
     l_ans = []
-    for row in cursor.execute("SELECT * FROM {};".format(table_name)):
+    for row in cursor.execute("SELECT * FROM " + table_name):
         l_ans.append(row)
     conn.close()
     encoded = json.dumps(l_ans, ensure_ascii=False).encode('utf8')
@@ -24,7 +24,7 @@ def create(table_name, args):
     conn = sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
     if table_name == "municipios":
-        query = "INSERT INTO municipios (nombre) VALUES ('{}')".format(args)
+        query = "INSERT INTO municipios (nombre) VALUES ('" + args + "');"
         cursor.execute(query)
         conn.commit()
     conn.close()
@@ -35,7 +35,18 @@ def update(table_name, args):
     conn =  sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
     if table_name == "municipios":
-        query = "UPDATE municipios SET nombre='{}' WHERE codigo={}".format(args[1], args[0])
+        query = "UPDATE municipios SET nombre='" + args[1] + "' WHERE codigo=" + args[0] + ";"
+        cursor.execute(query)
+        conn.commit()
+    conn.close()
+
+
+@eel.expose
+def delete(table_name, entry_id):
+    conn = sql.connect("siembrasDB.sqlite")
+    cursor = conn.cursor()
+    if (table_name == "municipios"):
+        query = "DELETE FROM municipios WHERE codigo=" + entry_id + ";"
         cursor.execute(query)
         conn.commit()
     conn.close()

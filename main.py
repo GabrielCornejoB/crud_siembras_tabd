@@ -24,8 +24,8 @@ def create(table_name, args):
     conn = sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
     if table_name == "municipios":
-        query = "INSERT INTO municipios (nombre) VALUES ('" + args + "');"
-        cursor.execute(query)
+        query = "INSERT INTO municipios (nombre) VALUES (?)"
+        cursor.execute(query, [args])
         conn.commit()
     conn.close()
 
@@ -35,8 +35,8 @@ def update(table_name, args):
     conn =  sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
     if table_name == "municipios":
-        query = "UPDATE municipios SET nombre='" + args[1] + "' WHERE codigo=" + args[0] + ";"
-        cursor.execute(query)
+        query = "UPDATE municipios SET nombre=(?) WHERE codigo=(?);"
+        cursor.execute(query, [args[1], args[0]])
         conn.commit()
     conn.close()
 
@@ -46,8 +46,8 @@ def delete(table_name, entry_id):
     conn = sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
     if (table_name == "municipios"):
-        query = "DELETE FROM municipios WHERE codigo=" + entry_id + ";"
-        cursor.execute(query)
+        query = "DELETE FROM municipios WHERE codigo=(?);"
+        cursor.execute(query, [entry_id])
         conn.commit()
     conn.close()
 

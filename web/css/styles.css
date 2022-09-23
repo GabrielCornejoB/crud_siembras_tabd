@@ -25,7 +25,7 @@ html {
 body {
     height: 100%;
 }
-p, a, button, td, th, input {
+p, a, button, td, th, input, option {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: white;
@@ -83,6 +83,40 @@ hr {
     height: 2px;
     background-color: var(--right);
 }
+select {
+    color: white;
+    font-size: 15px;
+    padding: 7px 15px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #2B2A40;
+    border-radius: 10px;
+    /* margin: 0 10px 10px 10px; */
+    transition: 0.4s;
+}
+select:focus, select:hover {
+    border: 2px solid var(--secondary);
+}
+select::-webkit-scrollbar-track {
+    background: #2B2A40;
+    width: 1px;
+    height: 1px;
+}
+select::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 10px;
+}
+select::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary_lighter);
+}
+option {
+    /* font-size: 15px; */
+    background-color: #2B2A40;
+    border: none;
+}
+
 
 .content {
     display: flex;
@@ -160,7 +194,16 @@ hr {
     width: 40%;
     background: var(--left);
 }
-
+.box {
+    margin-bottom: 20px;
+}
+.box p{
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 11%;
+    margin-bottom: 3px;
+}
 /* Menu crud parte inferior izq */
 .left_menu {
     display: grid;
@@ -220,7 +263,7 @@ hr {
     border: 2px solid transparent;
     background-color: #2B2A40;
     border-radius: 10px;
-    margin: 10px;
+    /* margin: 0 10px 10px 10px; */
     transition: 0.5s;
 }
 .crud_input:focus, .crud_input:hover {
@@ -235,14 +278,16 @@ hr {
     border: none;
     border-radius: 10px;
     background: var(--secondary);
-    margin: 10px;
+    /* margin: 0 15px 15px 15px; */
     transition: 0.4s;
 }
 .crud_btn:hover {
     cursor: pointer;
     background: var(--secondary_lighter);
 }
-
+.p_msg {
+    color: var(--secondary);
+}
 
 .right {
     height: 100%;
@@ -252,8 +297,6 @@ hr {
     align-items: center;
     justify-content: center;
     overflow-y: scroll;
-    /* overflow-x: scroll; */
-    /* width: */
 }
 
 .material-symbols-outlined {

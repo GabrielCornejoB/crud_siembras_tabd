@@ -4,19 +4,26 @@ document.querySelector(".crud_create").onclick = function (){
     mun_name = document.getElementById("create_mun_name");
     eel.create("municipios",mun_name.value);
     location.reload();
+    // document.getElementById("p_create").innerHTML = "Agregado exitosamente";
 }  
 
 // READ
 window.onload = function () {
-    eel.select("municipios")(fill_table);
+    eel.select("municipios")(get_data);
 }
-function fill_table(output){
+function get_data(output){
     console.log("read");
     json_list = JSON.parse(output);
-    string = "<tr><th>Id municipio</th><th>Nombre del municipio</th></tr>"
-    json_list.forEach(row => string = string.concat("<tr><td>", row[0], "</td>", "<td>", row[1] ,"</td></tr>"));
-    document.getElementById("data").innerHTML = string;
+    string_table = "<tr><th>Id municipio</th><th>Nombre del municipio</th></tr>";
+    string_select = "<option disabled selected value style='color:gray'></option>";
+    json_list.forEach(row => string_table = string_table.concat("<tr><td>", row[0], "</td>", "<td>", row[1] ,"</td></tr>"));
+    json_list.forEach(row => string_select = string_select.concat("<option value='", row[0], "'>", row[0], " - ", row[1], "</option>"));
+    document.getElementById("data").innerHTML = string_table;
+    document.getElementById("mun_options").innerHTML = string_select;
 }
+// function print_table() {
+
+// }
 
 //UPDATE
 // document.querySelector(".crud_update").onclick = function (){ 

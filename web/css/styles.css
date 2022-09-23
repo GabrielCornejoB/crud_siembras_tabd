@@ -54,7 +54,7 @@ table {
     text-align: center;
     justify-content: center;
     border-spacing: 0;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     width: 80%;
 }
 .siembras_table {
@@ -66,6 +66,7 @@ td {
     border-width: 1px;
     border-style: solid;
     border-color: var(--gray);
+    /* border-radius: 10px; */
     margin: 0;
     padding: 0;
 }

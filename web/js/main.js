@@ -1,3 +1,4 @@
+// Inserta el mismo menú en todas las páginas
 document.getElementById("menu").innerHTML = `
 <div class='nav_icons'>
     <span class='material-symbols-outlined close_btn' style='font-size:45px'>close</span>

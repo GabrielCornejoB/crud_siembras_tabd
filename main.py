@@ -18,7 +18,6 @@ def select(table_name):
     decoded = encoded.decode()
     return decoded
 
-
 @eel.expose
 def create(table_name, args):
     conn = sql.connect("siembrasDB.sqlite")
@@ -28,7 +27,6 @@ def create(table_name, args):
         cursor.execute(query, [args])
         conn.commit()
     conn.close()
-
 
 @eel.expose
 def update(table_name, args):
@@ -40,7 +38,6 @@ def update(table_name, args):
         conn.commit()
     conn.close()
 
-
 @eel.expose
 def delete(table_name, entry_id):
     conn = sql.connect("siembrasDB.sqlite")
@@ -50,6 +47,5 @@ def delete(table_name, entry_id):
         cursor.execute(query, [entry_id])
         conn.commit()
     conn.close()
-
 
 eel.start("index.html")

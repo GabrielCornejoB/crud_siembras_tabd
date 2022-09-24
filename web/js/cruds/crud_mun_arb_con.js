@@ -1,3 +1,4 @@
+// Obtiene el nombre de la tabla según el nombre del archivo
 let file_name = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 let table_name = file_name.slice(0, -5);
 console.log(table_name);
@@ -13,6 +14,7 @@ function clean_inputs() {
 function update_table() {
     eel.select(table_name)(get_data);
 }
+// Limpiar mensajes de error/success
 function clean_msgs() {
     ps = document.getElementsByClassName("p_msg");
     for (let p of ps) { p.innerHTML = ""; }

@@ -25,7 +25,8 @@
                         <input type="text" class="crud_input" id="create_mun_name">
                     </div>               
                     <button class="crud_btn crud_create">Agregar</button>
-                    <p id="p_create" class="p_msg"></p>
+                    <p id="create_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                    <p id="create_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
                 </div>
                 <div class="crud_content" id="div_update">
                     <p class="crud_title">ACTUALIZAR</p>
@@ -39,6 +40,8 @@
                         <input type="text" class="crud_input" id="update_mun_name">
                     </div>
                     <button class="crud_btn crud_update">Actualizar</button>
+                    <p id="update_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                    <p id="update_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
                 </div>
                 <div class="crud_content" id="div_delete">
                     <p class="crud_title">ELIMINAR</p>
@@ -48,6 +51,8 @@
                         <select id="delete_mun_id" class="crud_select"></select>
                     </div>
                     <button class="crud_btn crud_delete">Eliminar</button>
+                    <p id="delete_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                    <p id="delete_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
                 </div>
             </div>
             <div class="left_menu">

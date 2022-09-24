@@ -289,8 +289,18 @@ option {
 .p_msg {
     font-size: 20px;
     font-weight: bold;
-    color: var(--red);
     margin-top: 15px;
+    transition: 0.5s;
+}
+.p_msg:hover {
+    cursor: pointer;
+    filter: opacity(0.2);
+}
+.p_err{
+    color: var(--red);
+}
+.p_suc {
+    color: var(--secondary);
 }
 
 .right {

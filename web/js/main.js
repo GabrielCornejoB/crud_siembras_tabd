@@ -11,7 +11,7 @@ document.getElementById("menu").innerHTML = `
     <a href='../tables/arboles.html'>Arboles</a>
     <a href='../tables/municipios.html'>Municipios</a>
 </div>
-`
+`;
 
 // Toggle CRUD
 let div_create = document.getElementById("div_create");
@@ -20,6 +20,7 @@ let div_delete = document.getElementById("div_delete");
 div_create.hidden = false;
 div_update.hidden = true;
 div_delete.hidden = true;
+
 let current_div = div_create;
 const callToActionBtns = document.querySelectorAll(".btn_crud_menu");
 callToActionBtns.forEach((btn) => {
@@ -54,3 +55,4 @@ open_btn.addEventListener("click", function () {
 close_btn.addEventListener("click", function () {
     menu.classList.toggle("is-active");
 });
+

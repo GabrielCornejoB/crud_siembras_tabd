@@ -6,6 +6,17 @@ import sqlite3 as sql
 path_web = os.path.dirname(os.path.realpath(__file__)) + "\\web"
 eel.init(path_web)
 
+@eel.expose
+def get_init_params():
+    conn = sql.connect("siembrasDB.sqlite")
+    cursor = conn.cursor()
+    args = cursor.execute("SELECT * FROM parametros")
+    args = args.fetchone()
+    conn.close()
+    l_args = [args[0], args[1]]
+    args_json = json.dumps(l_args, ensure_ascii=False).encode('utf8')
+    return args_json.decode()
+    
 @eel.expose       
 def select(table_name):
     conn = sql.connect("siembrasDB.sqlite")
@@ -50,6 +61,7 @@ def delete(table_name, entry_id):
         cursor.execute(query, [entry_id])
         conn.commit()
     conn.close()
+    # return "¡Eliminado exitosamente!"
 
 
 eel.start("index.html")

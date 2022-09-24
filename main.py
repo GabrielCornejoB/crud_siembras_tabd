@@ -5,17 +5,6 @@ import sqlite3 as sql
 
 path_web = os.path.dirname(os.path.realpath(__file__)) + "\\web"
 eel.init(path_web)
-
-@eel.expose
-def get_init_params():
-    conn = sql.connect("siembrasDB.sqlite")
-    cursor = conn.cursor()
-    args = cursor.execute("SELECT * FROM parametros")
-    args = args.fetchone()
-    conn.close()
-    l_args = [args[0], args[1]]
-    args_json = json.dumps(l_args, ensure_ascii=False).encode('utf8')
-    return args_json.decode()
     
 @eel.expose       
 def select(table_name):
@@ -34,8 +23,8 @@ def select(table_name):
 def create(table_name, args):
     conn = sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
-    if table_name == "municipios":
-        query = "INSERT INTO municipios (nombre) VALUES (?)"
+    if table_name == "municipios" or table_name == "arboles" or table_name == "contratistas":
+        query = "INSERT INTO " + table_name + " (nombre) VALUES (?)"
         cursor.execute(query, [args])
         conn.commit()
     conn.close()
@@ -45,8 +34,8 @@ def create(table_name, args):
 def update(table_name, args):
     conn =  sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
-    if table_name == "municipios":
-        query = "UPDATE municipios SET nombre=(?) WHERE codigo=(?);"
+    if table_name == "municipios" or table_name == "arboles" or table_name == "contratistas":
+        query = "UPDATE " + table_name + " SET nombre=(?) WHERE codigo=(?);"
         cursor.execute(query, [args[1], args[0]])
         conn.commit()
     conn.close()
@@ -56,12 +45,11 @@ def update(table_name, args):
 def delete(table_name, entry_id):
     conn = sql.connect("siembrasDB.sqlite")
     cursor = conn.cursor()
-    if (table_name == "municipios"):
-        query = "DELETE FROM municipios WHERE codigo=(?);"
+    if table_name == "municipios" or table_name == "arboles" or table_name == "contratistas":
+        query = "DELETE FROM " + table_name + " WHERE codigo=(?);"
         cursor.execute(query, [entry_id])
         conn.commit()
     conn.close()
-    # return "¡Eliminado exitosamente!"
 
 
 eel.start("index.html")

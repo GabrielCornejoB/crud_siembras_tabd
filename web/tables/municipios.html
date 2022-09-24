@@ -22,7 +22,7 @@
                     <hr>
                     <div class="box">
                         <p>Nombre del municipio</p>
-                        <input type="text" class="crud_input" id="create_mun_name">
+                        <input type="text" class="crud_input" id="create_name">
                     </div>               
                     <button class="crud_btn crud_create">Agregar</button>
                     <p id="create_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
@@ -33,11 +33,11 @@
                     <hr>
                     <div class="box">
                         <p>Id del municipio a actualizar</p>
-                        <select id="update_mun_id" class="crud_select"></select>
+                        <select id="update_id" class="crud_select"></select>
                     </div>
                     <div class="box">
                         <p>Nuevo nombre del municipio</p>
-                        <input type="text" class="crud_input" id="update_mun_name">
+                        <input type="text" class="crud_input" id="update_name">
                     </div>
                     <button class="crud_btn crud_update">Actualizar</button>
                     <p id="update_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
@@ -48,7 +48,7 @@
                     <hr>
                     <div class="box">
                         <p>Id del municipio a eliminar</p>
-                        <select id="delete_mun_id" class="crud_select"></select>
+                        <select id="delete_id" class="crud_select"></select>
                     </div>
                     <button class="crud_btn crud_delete">Eliminar</button>
                     <p id="delete_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
@@ -69,7 +69,7 @@
     </div>
     
     <script type = "text/javascript" src = "../js/main.js"></script> 
-    <script type = "text/javascript" src = "../js/cruds/crud_municipios.js"></script> 
+    <script type = "text/javascript" src = "../js/cruds/crud_mun_arb_con.js"></script> 
     <script type = "text/javascript" src = "../eel.js"></script> 
 </body>
 </html>

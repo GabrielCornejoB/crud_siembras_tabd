@@ -54,4 +54,3 @@ open_btn.addEventListener("click", function () {
 close_btn.addEventListener("click", function () {
     menu.classList.toggle("is-active");
 });
-

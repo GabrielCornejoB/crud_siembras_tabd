@@ -6,9 +6,21 @@ El dominio del problema fue tomado de: [Datos Abiertos Colombia](https://www.dat
 
 A continuación se encuentran vinculos que te desplazarán a las diferentes secciones de este README:
 
+[Requisitos](#requisitos)
+
 [Implementación](#implementación)
 
 [Tablas del dominio]()
+
+---
+
+## **Requisitos**
+Para poder ejecutar el código:
+* Python 3.6 o una versión superior
+* pip
+* Librería 'eel' instalada (pip install eel)
+
+Cuando el ejecutable esté listo, para generar el ejecutable no se necesita tener nada instalado, ni si quiera Python.
 
 ---
 

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300&display=swap');
 
 :root {
-    --header: /*#2E3545*/ #1B1A26; 
-    --left: /*#404A5F*/ #232136;
-    --right: /*#48536B*/ #2B2A40;
+    --header: #1B1A26; 
+    --left: #232136;
+    --right: #2B2A40;
     --menu: #14131e;
     --gray: #a5a5a5;
 
